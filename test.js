@@ -12,7 +12,7 @@ function updateScore() {
 
 function playRound() {
   const buttons = document.querySelectorAll(".buttonContainer button");
-  const computerOptions = ["rock", "paper", "scissors"];
+  const computerOptions = ["Rock", "Paper", "Scissors"];
 
   buttons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -33,27 +33,27 @@ const compareHands = (playerSelection, computerSelection) => {
 
   if (playerSelection == computerSelection) {
     winner.textContent = "It's a tie!";
-  } else if (playerSelection == "paper" && computerSelection == "rock") {
+  } else if (playerSelection == "Paper" && computerSelection == "Rock") {
     winner.textContent = "You win! Paper beats rock!";
     pScore++;
     updateScore();
-  } else if (playerSelection == "rock" && computerSelection == "paper") {
+  } else if (playerSelection == "Rock" && computerSelection == "Paper") {
     winner.textContent = "I win! Paper beats rock!";
     cScore++;
     updateScore();
-  } else if (playerSelection == "rock" && computerSelection == "scissors") {
+  } else if (playerSelection == "Rock" && computerSelection == "Scissors") {
     winner.textContent = "You win! Rock beats scissors!";
     pScore++;
     updateScore();
-  } else if (playerSelection == "scissors" && computerSelection == "rock") {
+  } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
     winner.textContent = "I win! Rock beats scissors!";
     cScore++;
     updateScore();
-  } else if (playerSelection == "scissors" && computerSelection == "paper") {
+  } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
     winner.textContent = "You win! Scissors beats paper!";
     pScore++;
     updateScore();
-  } else if (playerSelection == "paper" && computerSelection == "scissors") {
+  } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
     winner.textContent = "I win! Scissors beats paper!";
     cScore++;
     updateScore();

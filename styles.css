@@ -1,10 +1,23 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Jua", sans-serif;
+  background-color: rgb(39, 35, 36);
+}
+
 .scoreBoard {
   display: flex;
   justify-content: space-around;
-  border: 1px solid red;
-  background-color: rgb(0, 0, 0);
+  border: 15px groove #e86f68;
+  background-color: #e4d8b4;
   opacity: 0.9;
-  color: red;
+  color: rgb(39, 35, 36);
+  margin: 2px 2px 0 2px;
+  height: 15vh;
 }
 .scoreBoard .playerScore,
 .scoreBoard .computerScore {
@@ -17,7 +30,12 @@
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  margin: 20px 0 0 0;
+}
+
+.gameInstructions {
+  text-align: center;
+  margin-top: 30px;
+  color: #e2cd6d;
 }
 
 section {
@@ -27,10 +45,11 @@ section {
   width: 100vw;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid red;
-  background-color: black;
+  border: 15px dashed #e86f68;
+  border-radius: 2%;
+  background-color: #e4d8b4;
   opacity: 0.9;
-  color: red;
+  color: rgb(39, 35, 36);
 }
 
 .winner {
@@ -42,24 +61,63 @@ section {
   width: 40vh;
   justify-content: space-between;
 }
-/* Put in a better box shadow */
+
 .rock {
   font-size: 30px;
   cursor: pointer;
-
-  border: 2px solid red;
+  box-shadow: 2px 2px 20px silver;
+  border: 2px solid silver;
+  color: rgb(39, 35, 36);
+  background-color: #e4d8b4;
+  font-family: "Jua", sans-serif;
+  padding: 10px 10px 10px 10px;
+  outline: none;
 }
+.rock:hover {
+  animation-name: button;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+
 .paper {
   font-size: 30px;
   cursor: pointer;
-
-  border: 2px solid red;
+  box-shadow: 2px 2px 20px silver;
+  border: 2px solid silver;
+  color: rgb(39, 35, 36);
+  background-color: #e4d8b4;
+  font-family: "Jua", sans-serif;
+  padding: 10px 10px 10px 10px;
+  outline: none;
 }
+.paper:hover {
+  animation-name: button;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+
 .scissors {
   font-size: 30px;
   cursor: pointer;
-
-  border: 2px solid red;
+  box-shadow: 2px 2px 20px silver;
+  border: 2px solid silver;
+  color: rgb(39, 35, 36);
+  background-color: #e4d8b4;
+  font-family: "Jua", sans-serif;
+  padding: 10px 10px 10px 10px;
+  outline: none;
+}
+.scissors:hover {
+  animation-name: button;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+/*Call button animation here */
+@keyframes button {
+  100% {
+    color: red;
+    box-shadow: 3px 3px 20px grey;
+  }
 }
 
 /* The class that ends the game */
